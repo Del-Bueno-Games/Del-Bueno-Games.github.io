@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" width="600" height="260" role="img" aria-label="DBG, Del Bueno Games">
+    <!-- Placeholder brand mark: replace this file to change the logo. Keep the 600x260 viewBox or update width/height in index.html. assets/img/favicon.svg and assets/img/og.png (1200x630, shared link image) repeat this mark: replace them too. -->
+    <g fill="#f5f5f5" font-family="system-ui, Segoe UI, Roboto, Arial, sans-serif" font-weight="700" text-anchor="middle">
+        <text x="300" y="165" font-size="168" letter-spacing="6">DBG</text>
+        <text x="300" y="232" font-size="44" letter-spacing="8">Del Bueno Games</text>
+    </g>
+</svg>

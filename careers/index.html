@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Careers | Del Bueno Games</title>
+    <meta name="description" content="Join Del Bueno Games, an independent video game studio. Send us your application with a link to your portfolio or CV.">
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://delbuenogames.com/careers/">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/contact.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="brand"><a href="/"><img src="../assets/img/brand.svg" alt="DBG, Del Bueno Games" width="600" height="260"></a></h1>
+    </header>
+    <main class="container">
+        <section id="careers" class="section" aria-labelledby="careers-title">
+            <h2 id="careers-title">Careers</h2>
+            <div class="panel">
+                <!-- Placeholder text: replace the introduction with the final copy. -->
+                <p>We are always happy to meet people who love making games. Tell us who you are and send a link to your work.</p>
+                <form class="contact-form" action="https://script.google.com/macros/s/AKfycbwpDi107hpgzn3h32MG_jerOkLigRV9ItebDQZ9Th3B-QbZqj8rZuU2F3XIpagCHj1gHg/exec" method="post" accept-charset="utf-8">
+                    <input type="hidden" name="form" value="careers">
+                    <div class="form-grid">
+                        <label class="field">
+                            <span>Name</span>
+                            <input type="text" name="name" required maxlength="100" autocomplete="name">
+                        </label>
+                        <label class="field">
+                            <span>Email</span>
+                            <input type="email" name="email" required maxlength="254" autocomplete="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="An email address like name@example.com">
+                        </label>
+                    </div>
+                    <label class="field">
+                        <span>Position</span>
+                        <!-- The list of positions lives only in this select; the script does not know it. Add or remove options here. -->
+                        <select name="position" required>
+                            <option value="" selected disabled>Select a position</option>
+                            <option value="Open application">Open application</option>
+                        </select>
+                    </label>
+                    <label class="field">
+                        <span>Portfolio or CV link</span>
+                        <input type="url" name="link" required maxlength="500" autocomplete="url" placeholder="https://">
+                    </label>
+                    <label class="field">
+                        <span>Message <small>(optional)</small></span>
+                        <textarea name="message" rows="5" maxlength="4000"></textarea>
+                    </label>
+                    <label class="check">
+                        <input type="checkbox" name="consent" value="yes" required>
+                        <span>I agree that you store my data for the selection process</span>
+                    </label>
+                    <div class="contact-trap" aria-hidden="true">
+                        <label>Leave this field empty
+                            <input type="text" name="website" tabindex="-1" autocomplete="off">
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-submit">Apply</button>
+                    <div class="contact-status" role="status" aria-live="polite">
+                        <p data-state="sending" hidden>Sending your application…</p>
+                        <p data-state="sent" hidden>Thanks! Your application was sent. We'll be in touch if there is a fit.</p>
+                        <p data-state="error" hidden>We couldn't send your application. Please email us at <a href="mailto:contact@delbuenogames.com">contact@delbuenogames.com</a>.</p>
+                    </div>
+                    <p class="form-note">We store your name, email, link and message for the selection process. To ask us to delete them, write to <a href="mailto:contact@delbuenogames.com">contact@delbuenogames.com</a>.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <section class="newsletter" aria-labelledby="newsletter-title">
+            <h2 id="newsletter-title">Newsletter</h2>
+            <form class="contact-form" action="https://script.google.com/macros/s/AKfycbwpDi107hpgzn3h32MG_jerOkLigRV9ItebDQZ9Th3B-QbZqj8rZuU2F3XIpagCHj1gHg/exec" method="post" accept-charset="utf-8">
+                <input type="hidden" name="form" value="newsletter">
+                <label class="field">
+                    <span>Email</span>
+                    <input type="email" name="email" required maxlength="254" autocomplete="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="An email address like name@example.com">
+                </label>
+                <label class="check">
+                    <input type="checkbox" name="consent" value="yes" required>
+                    <span>I want to receive news and promotions by email</span>
+                </label>
+                <div class="contact-trap" aria-hidden="true">
+                    <label>Leave this field empty
+                        <input type="text" name="website" tabindex="-1" autocomplete="off">
+                    </label>
+                </div>
+                <button type="submit" class="btn-submit">Subscribe</button>
+                <div class="contact-status" role="status" aria-live="polite">
+                    <p data-state="sending" hidden>Subscribing…</p>
+                    <p data-state="sent" hidden>You're subscribed. Thanks for joining!</p>
+                    <p data-state="error" hidden>We couldn't subscribe you. Please email us at <a href="mailto:contact@delbuenogames.com">contact@delbuenogames.com</a>.</p>
+                </div>
+                <p class="form-note">We store your email to send you news and promotions. To unsubscribe and have it deleted, write to <a href="mailto:contact@delbuenogames.com">contact@delbuenogames.com</a>.</p>
+            </form>
+        </section>
+        <p class="footer-links"><a href="/">Home</a></p>
+        <p>&copy; 2026 Del Bueno Games. All rights reserved.</p>
+    </footer>
+</body>
+</html>

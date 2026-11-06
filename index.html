@@ -22,6 +22,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/catalog.js" defer></script>
+    <script src="assets/js/contact.js" defer></script>
 </head>
 <body>
     <header class="site-header">
@@ -63,6 +64,51 @@
             <h2 id="contact-title">Contact</h2>
             <div class="panel">
                 <p>Email us at <a href="mailto:contact@delbuenogames.com">contact@delbuenogames.com</a></p>
+                <!-- The script address lives only in the action attributes of the forms (here and in the footer; careers/index.html has its own); the guide in Contact-Script/README.md says where it comes from. -->
+                <form class="contact-form" action="https://script.google.com/macros/s/AKfycbwpDi107hpgzn3h32MG_jerOkLigRV9ItebDQZ9Th3B-QbZqj8rZuU2F3XIpagCHj1gHg/exec" method="post" accept-charset="utf-8">
+                    <input type="hidden" name="form" value="contact">
+                    <div class="form-grid">
+                        <label class="field">
+                            <span>Name</span>
+                            <input type="text" name="name" required maxlength="100" autocomplete="name">
+                        </label>
+                        <label class="field">
+                            <span>Company <small>(optional)</small></span>
+                            <input type="text" name="company" maxlength="100" autocomplete="organization">
+                        </label>
+                        <label class="field">
+                            <span>Email</span>
+                            <input type="email" name="email" required maxlength="254" autocomplete="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="An email address like name@example.com">
+                        </label>
+                        <label class="field">
+                            <span>Reason</span>
+                            <select name="reason" required>
+                                <option value="" selected disabled>Select a reason</option>
+                                <option value="Press">Press</option>
+                                <option value="Publishing">Publishing</option>
+                                <option value="Collaboration">Collaboration</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </label>
+                    </div>
+                    <label class="field">
+                        <span>Message</span>
+                        <textarea name="message" rows="5" required maxlength="4000"></textarea>
+                    </label>
+                    <div class="contact-trap" aria-hidden="true">
+                        <label>Leave this field empty
+                            <input type="text" name="website" tabindex="-1" autocomplete="off">
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-submit">Send</button>
+                    <div class="contact-status" role="status" aria-live="polite">
+                        <p data-state="sending" hidden>Sending your message…</p>
+                        <p data-state="sent" hidden>Thanks! Your message was sent. We'll get back to you soon.</p>
+                        <p data-state="error" hidden>We couldn't send your message. Please email us at <a href="mailto:contact@delbuenogames.com">contact@delbuenogames.com</a>.</p>
+                    </div>
+                    <p class="form-note">We store your name, company, email and message to answer you. To ask us to delete them, write to <a href="mailto:contact@delbuenogames.com">contact@delbuenogames.com</a>.</p>
+                </form>
+                <p>Want to join the team? See our <a href="/careers/">careers page</a>.</p>
                 <ul class="socials">
                     <li><a href="https://www.instagram.com/" rel="noopener">Instagram</a></li>
                     <li><a href="https://x.com/" rel="noopener">X</a></li>
@@ -74,6 +120,33 @@
         <!-- Placeholder texts: end -->
     </main>
     <footer class="site-footer">
+        <section class="newsletter" aria-labelledby="newsletter-title">
+            <h2 id="newsletter-title">Newsletter</h2>
+            <form class="contact-form" action="https://script.google.com/macros/s/AKfycbwpDi107hpgzn3h32MG_jerOkLigRV9ItebDQZ9Th3B-QbZqj8rZuU2F3XIpagCHj1gHg/exec" method="post" accept-charset="utf-8">
+                <input type="hidden" name="form" value="newsletter">
+                <label class="field">
+                    <span>Email</span>
+                    <input type="email" name="email" required maxlength="254" autocomplete="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="An email address like name@example.com">
+                </label>
+                <label class="check">
+                    <input type="checkbox" name="consent" value="yes" required>
+                    <span>I want to receive news and promotions by email</span>
+                </label>
+                <div class="contact-trap" aria-hidden="true">
+                    <label>Leave this field empty
+                        <input type="text" name="website" tabindex="-1" autocomplete="off">
+                    </label>
+                </div>
+                <button type="submit" class="btn-submit">Subscribe</button>
+                <div class="contact-status" role="status" aria-live="polite">
+                    <p data-state="sending" hidden>Subscribing…</p>
+                    <p data-state="sent" hidden>You're subscribed. Thanks for joining!</p>
+                    <p data-state="error" hidden>We couldn't subscribe you. Please email us at <a href="mailto:contact@delbuenogames.com">contact@delbuenogames.com</a>.</p>
+                </div>
+                <p class="form-note">We store your email to send you news and promotions. To unsubscribe and have it deleted, write to <a href="mailto:contact@delbuenogames.com">contact@delbuenogames.com</a>.</p>
+            </form>
+        </section>
+        <p class="footer-links"><a href="/careers/">Careers</a></p>
         <p>&copy; 2026 Del Bueno Games. All rights reserved.</p>
     </footer>
 </body>

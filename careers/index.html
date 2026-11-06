@@ -10,6 +10,7 @@
     <link rel="canonical" href="https://delbuenogames.com/careers/">
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="../assets/js/contact.js" defer></script>
+    <script src="../assets/js/careers.js" defer></script>
 </head>
 <body>
     <header class="site-header">
@@ -19,9 +20,53 @@
         <section id="careers" class="section" aria-labelledby="careers-title">
             <h2 id="careers-title">Careers</h2>
             <div class="panel">
-                <!-- Placeholder text: replace the introduction with the final copy. -->
-                <p>We are always happy to meet people who love making games. Tell us who you are and send a link to your work.</p>
-                <form class="contact-form" action="https://script.google.com/macros/s/AKfycbwpDi107hpgzn3h32MG_jerOkLigRV9ItebDQZ9Th3B-QbZqj8rZuU2F3XIpagCHj1gHg/exec" method="post" accept-charset="utf-8">
+                <p>We're a small independent studio from Buenos Aires, and everyone who joins shapes the games we make. Below are our open roles. If none of them fits but you'd like to work with us, send an open application.</p>
+                <div class="jobs">
+                    <h3>Open positions</h3>
+                    <!-- One block per position. To add one: copy a block, change the h4 title (the position name: the Apply buttons and the form select read it from there) and the texts, and add an option with the same name to the select below. To close one, delete the block and its option. -->
+                    <article class="job">
+                        <h4>Lead Artist</h4>
+                        <p class="job-meta">Remote · Monthly fee, freelance/contractor</p>
+                        <a class="btn-apply" href="#apply">Apply</a>
+                        <p>Del Bueno Games is an independent studio from Buenos Aires. We're making Farol Criollo, a co-op city builder set in Latin America, with a stylized semi-realistic look (think Anno 1800 or Manor Lords) and a strong local identity: humble towns, shantytowns ("villas") and everyday Argentine streets.</p>
+                        <p>We're looking for the person who takes charge of the game's art: the art counterpart to our lead programmer.</p>
+                        <h5>What you'll own</h5>
+                        <ul>
+                            <li>Art direction: define the style with the studio's founder and creative director (palette, level of detail, materials) and keep the game true to it.</li>
+                            <li>The art plan: what the game needs, what you make yourself, what we buy and what needs someone else.</li>
+                            <li>The team: tell us which other art roles the project really needs, and when. We aim to keep the team small.</li>
+                            <li>The budget: you choose the assets and the people, always with cost in mind.</li>
+                            <li>Hands-on work: concept art for buildings and street elements, and game-ready models and textures in modular kits.</li>
+                        </ul>
+                        <h5>First tasks</h5>
+                        <ul>
+                            <li>The style guide.</li>
+                            <li>The art plan: the roles and assets the game needs, and what they cost.</li>
+                            <li>Town kit: 3 houses.</li>
+                            <li>Shantytown kit: 4 shacks.</li>
+                            <li>Then: shops, a warehouse, a police station and street elements.</li>
+                        </ul>
+                        <h5>What we're looking for</h5>
+                        <ul>
+                            <li>A portfolio with concept art and finished 3D models.</li>
+                            <li>Experience with game-ready models (optimized, with PBR textures).</li>
+                            <li>Blender or Maya.</li>
+                            <li>Someone who makes decisions and answers for them.</li>
+                            <li>Spanish required: it's our working language.</li>
+                            <li>Nice to have: Source 2, s&amp;box, Unity or Unreal; architecture or environments; leading other artists.</li>
+                        </ul>
+                        <h5>How we work</h5>
+                        <ul>
+                            <li>Remote, as a freelancer or contractor, with a fixed monthly fee.</li>
+                            <li>The fee and hours are agreed with you from the first conversation, and dedication can grow as the project does.</li>
+                            <li>This is a core role: you'd be one of the people making sure the game gets finished.</li>
+                        </ul>
+                        <h5>How to apply</h5>
+                        <p>Send us a link to your portfolio using the form below. In your message, tell us your expected monthly fee and your availability.</p>
+                        <a class="btn-apply" href="#apply">Apply</a>
+                    </article>
+                </div>
+                <form id="apply" class="contact-form" action="https://script.google.com/macros/s/AKfycbwpDi107hpgzn3h32MG_jerOkLigRV9ItebDQZ9Th3B-QbZqj8rZuU2F3XIpagCHj1gHg/exec" method="post" accept-charset="utf-8">
                     <input type="hidden" name="form" value="careers">
                     <div class="form-grid">
                         <label class="field">
@@ -35,10 +80,11 @@
                     </div>
                     <label class="field">
                         <span>Position</span>
-                        <!-- The list of positions lives only in this select; the script does not know it. Add or remove options here. -->
+                        <!-- Keep one option per position block above (same name). Without JavaScript this list is used as is; with it, careers.js adds any missing one and warns in the console. The script that receives the form does not know the list. -->
                         <select name="position" required>
                             <option value="" selected disabled>Select a position</option>
-                            <option value="Open application">Open application</option>
+                            <option value="Lead Artist">Lead Artist</option>
+                            <option value="Open application" data-general>Open application</option>
                         </select>
                     </label>
                     <label class="field">

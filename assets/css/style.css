@@ -351,6 +351,61 @@ a.card:hover
     cursor: pointer;
 }
 
+.jobs
+{
+    margin: 0 0 1.5rem;
+}
+
+.job
+{
+    max-width: 620px;
+    margin: 0 0 1rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.job h3,
+.job h4,
+.job h5
+{
+    margin: 0 0 0.5rem;
+}
+
+.job h5
+{
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.job-meta
+{
+    color: var(--text-muted);
+}
+
+.job ul
+{
+    margin: 0 0 1rem;
+    padding-left: 1.25rem;
+}
+
+.btn-apply
+{
+    display: inline-block;
+    margin: 0 0 1rem;
+    padding: 0.6875rem 1.375rem;
+    min-height: 44px;
+    box-sizing: border-box;
+    background: var(--link);
+    border: 1px solid var(--link);
+    border-radius: var(--radius);
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
 .btn-submit:disabled
 {
     opacity: 0.6;

@@ -1,7 +1,7 @@
 :root
 {
     --bg: #000;
-    --pattern: #151515;
+    --pattern: #0d0d0d;
     --bg-card: #141414;
     --border: #2e2e2e;
     --text: #ededed;
@@ -10,6 +10,7 @@
     --scrollbar: #3a3a3a;
     --radius: 10px;
     --card-width: min(80vw, 460px);
+    --container: 1200px;
     color-scheme: dark;
     --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
@@ -28,7 +29,7 @@ body
 {
     margin: 0;
     background-color: var(--bg);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' shape-rendering='crispEdges'%3E%3Cpath fill='%23151515' d='M23 20h2v8h-2zM20 23h8v2h-8z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' shape-rendering='crispEdges'%3E%3Cpath fill='%230d0d0d' d='M23 20h2v8h-2zM20 23h8v2h-8z'/%3E%3C/svg%3E");
     background-size: 48px 48px;
     color: var(--text);
     font-family: var(--font-sans);
@@ -80,7 +81,7 @@ a:focus-visible,
 
 .container
 {
-    max-width: 1200px;
+    max-width: var(--container);
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -118,7 +119,7 @@ h2
 .catalog > li
 {
     display: flex;
-    flex: none;
+    flex: 1 0 var(--card-width);
     scroll-snap-align: start;
 }
 
@@ -126,7 +127,7 @@ h2
 {
     display: flex;
     flex-direction: column;
-    width: var(--card-width);
+    width: 100%;
     padding-bottom: 0.75rem;
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -158,6 +159,7 @@ a.card:hover
 .card-line
 {
     padding: 0 1rem;
+    max-width: 60ch;
     color: var(--text-muted);
     font-size: 0.95rem;
 }
@@ -216,7 +218,7 @@ a.card:hover
 .panel p
 {
     margin: 0 0 1rem;
-    max-width: 65ch;
+    max-width: 60ch;
 }
 
 .panel p:last-child
@@ -319,6 +321,7 @@ a.card:hover
 .form-note
 {
     margin: 1rem 0 0;
+    max-width: 60ch;
     color: var(--text-muted);
     font-size: 0.85rem;
 }
@@ -389,6 +392,7 @@ a.card:hover
 {
     margin: 0 0 1rem;
     padding-left: 1.25rem;
+    max-width: 60ch;
 }
 
 .btn-apply
@@ -408,7 +412,7 @@ a.card:hover
 
 .btn-submit:disabled
 {
-    opacity: 0.6;
+    opacity: 0.65;
     cursor: default;
 }
 
@@ -471,6 +475,149 @@ a.card:hover
     .form-grid
     {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1024px)
+{
+    .catalog
+    {
+        margin-inline: -0.5rem;
+    }
+
+    .panel-about
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2.5rem;
+    }
+
+    .panel-about p
+    {
+        margin: 0;
+    }
+
+    .panel-contact
+    {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+        grid-template-rows: auto auto auto 1fr;
+        column-gap: 2.5rem;
+    }
+
+    .panel-contact > p,
+    .panel-contact > .socials
+    {
+        grid-column: 1;
+    }
+
+    .panel-contact .contact-form
+    {
+        grid-column: 2;
+        grid-row: 1 / -1;
+        max-width: none;
+        margin: 0;
+    }
+
+    .panel-careers
+    {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        grid-template-rows: auto 1fr;
+        column-gap: 2.5rem;
+    }
+
+    .panel-careers > p,
+    .panel-careers > .jobs
+    {
+        grid-column: 1;
+    }
+
+    .panel-careers .contact-form
+    {
+        grid-column: 2;
+        grid-row: 1 / -1;
+        align-self: start;
+        max-width: none;
+        margin: 0;
+        scroll-margin-top: 1rem;
+    }
+
+    .panel-careers .field textarea
+    {
+        min-height: 6rem;
+        height: 6rem;
+    }
+
+    .panel-careers .jobs
+    {
+        margin-bottom: 0;
+    }
+
+    .job
+    {
+        max-width: none;
+    }
+
+    .site-footer
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding-inline: max(1rem, calc((100% - var(--container)) / 2 + 1rem));
+    }
+
+    .newsletter
+    {
+        flex: 0 0 100%;
+        max-width: none;
+        margin: 0 0 1.5rem;
+    }
+
+    .newsletter .contact-form
+    {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto auto;
+        column-gap: 1.5rem;
+        align-items: end;
+        max-width: none;
+        margin: 0;
+    }
+
+    .newsletter .field,
+    .newsletter .check,
+    .newsletter .btn-submit
+    {
+        margin-bottom: 0;
+    }
+
+    .newsletter .check
+    {
+        align-items: center;
+        min-height: calc(1.5em + 1.25rem + 2px);
+    }
+
+    .newsletter .contact-status,
+    .newsletter .form-note
+    {
+        grid-column: 1 / -1;
+    }
+
+    .footer-links
+    {
+        margin: 0;
+    }
+}
+
+/* A sticky form taller than the window would keep its submit button out of reach. */
+@media (min-width: 1024px) and (min-height: 590px)
+{
+    .panel-careers .contact-form
+    {
+        position: sticky;
+        top: 1rem;
     }
 }
 
